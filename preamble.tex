@@ -1,0 +1,101 @@
+
+%%% --- From the original amsart template --- %%%
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{xca}[theorem]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\numberwithin{equation}{section}
+
+
+
+%%% --- New environments added by us --- %%%
+
+\theoremstyle{plain}
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{exercise}{Exercise}[section]
+\newtheorem{problem}{Problem}[section]
+\newtheorem{application}{Application}[section]
+\newtheorem{construction}{Construction}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{corollary}{Corollary}
+\newtheorem{propdef}[theorem]{Proposition-Definition}
+
+\theoremstyle{remark}
+\newtheorem*{note}{Note}
+
+
+
+%%% --- Packages (all added by us) --- %%%
+
+% TODO: Do we need all these? Remove one-by-one and compile.
+% Note that some of these may not be compatible with amsart; see the Author Handbook link above.
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{hyperref}
+\usepackage{tikz-cd}
+\usepackage{relsize}
+\usepackage[makeroom]{cancel}
+
+\usepackage{xifthen}
+
+% Packages for tikz
+\usepackage{tikz,ulem}
+\usepackage{adjustbox}
+\usetikzlibrary{arrows}
+
+%\usepackage{showkeys}
+
+%%% --- End of packages --- %%%
+
+
+
+%%% --- New commands added by us --- %%%
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\PP}{\mathbb{PP}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Fp}{\mathbb{F}_p}
+\newcommand{\Fq}{\mathbb{F}_q}
+
+\newcommand{\defhl}[1]{\textbf{#1}}
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{} #4
+		\end{array}
+	\right.
+}
+
+\newcommand{\threepartdef}[6]
+{
+	\left\{
+		\begin{array}{lll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4 \\
+			#5 & \mbox{} #6
+		\end{array}
+	\right.
+}
+
+\newcommand{\Mod}[1]{\ (\text{mod}\ #1)}
+
